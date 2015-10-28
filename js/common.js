@@ -22,9 +22,9 @@ $.fn.extend({
 			"height": height * scale + "px"
 		});
 
-		console.log(_this.width()+"\n"+_this.height());
+		// console.log(_this.width()+"\n"+_this.height());
 
-		console.log(options["x"]);
+		// console.log(options["x"]);
 
 		if (options["x"] && options["y"]) {
 			_this.css({
