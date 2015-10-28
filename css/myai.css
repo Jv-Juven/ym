@@ -1,0 +1,148 @@
+/*
+==============================================
+arrowing
+==============================================
+*/
+
+.arrowing{
+	animation-name: arrowing;
+	-webkit-animation-name: arrowing;
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes arrowing {
+	0% {
+		transform: translateY(0%);	
+	}
+	50% {
+		transform: translateY(50%);	
+	}	
+	100% {
+		transform: translateY(0%);
+	}			
+}
+
+@-webkit-keyframes arrowing {
+	0% {
+		-webkit-transform: translateY(0%);	
+	}
+	50% {
+		-webkit-transform: translateY(50%);	
+	}	
+	100% {
+		-webkit-transform: translateY(0%);
+	}			
+}
+
+/*
+==============================================
+scale-opct
+==============================================
+*/
+.scale-opct{
+	-webkit-animation:scale-opct 1.6s 0s infinite linear normal forwards;
+	        animation:scale-opct 1.6s 0s infinite linear normal forwards;
+}
+@-webkit-keyframes scale-opct{
+	0%{
+		-webkit-transform:scale3d(0.1,0.1,0);
+		opacity: 0.2;
+	}
+	80%{
+		-webkit-transform:scale3d(1.2,1.2,0);
+		opacity: 1;
+	}
+	100%{
+		-webkit-transform:scale3d(1.5,1.5,0);
+		opacity: 0.1;
+	}
+}
+
+@keyframes scale-opct{
+	0%{
+		transform:scale3d(0.1,0.1,0);
+		opacity: 0.2;
+	}
+	80%{
+		transform:scale3d(1.2,1.2,0);
+		opacity: 1;
+	}
+	100%{
+		transform:scale3d(1.5,1.5,0);
+		opacity: 0.1;
+	}
+}
+
+/*
+==============================================
+stars-twinkle
+==============================================
+*/
+/*.stars-twinkle{
+	-webkit-animation:stars-twinkle 2s 0s infinite ease normal forwards;
+			animation:stars-twinkle 2s 0s infinite ease normal forwards;
+}
+@-webkit-keyframes stars-twinkle{
+	0%{
+		opacity: 0.1;
+	}
+	50%{
+		opacity: 1;
+	}
+	/*40%{
+		opacity: 0;
+	}*/
+	/*100%{
+		opacity: 0.1;
+	}
+}
+@keyframes stars-twinkle{
+	0%{
+		opacity: 0.1;
+	}
+	50%{
+		opacity: 1;
+	}*/
+	/*40%{
+		opacity: 0;
+	}*/
+	/*100%{
+		opacity: 0.1;
+	}
+}*/
+
+/*
+==============================================
+big-opct
+==============================================
+*/
+.big-opct{
+	-webkit-animation:big-opct 1s 0s 1 ease-in normal forwards;
+			animation:big-opct 1s 0s 1 ease-in normal forwards;
+}
+@-webkit-keyframes big-opct{
+	0%{
+		opacity: 0.2;
+		-webkit-transform:scale3d(2,2,0);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform:scale3d(1,1,0);
+	}
+}
+
+@keyframes big-opct{
+	0%{
+		opacity: 0.2;
+		transform:scale3d(2,2,0);
+	}
+	100%{
+		opacity: 1;
+		transform:scale3d(1,1,0);
+	}
+}

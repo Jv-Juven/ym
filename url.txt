@@ -1,0 +1,1 @@
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa67e8e7d9404fb7f&redirect_uri=http%3a%2f%2fmakerh5.com%2fweb%2fhxet2%2findex.php&response_type=code&scope=snsapi_base&state=123#wechat_redirect

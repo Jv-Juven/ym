@@ -1,0 +1,260 @@
+﻿
+
+
+
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<meta name="author" content="">
+
+	<meta name="description" content="">
+
+	<meta name="viewport" content="minimal-ui">
+
+	<script>document.documentElement.className = 'js';</script>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<!-- Force latest IE rendering engine & Chrome Frame -->
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Make IE recognise HTML5 elements for styling -->
+
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+	<script type="text/javascript" src="http://makaprojects.oss-cn-hangzhou.aliyuncs.com/js/jquery-1.11.0.min.js"></script>
+
+	<!-- <script src="http://makaprojects.oss-cn-hangzhou.aliyuncs.com/js/jquery.event.move.js"></script> -->
+	<script src="js/jquery.event.swipe.js"></script>
+
+	<!-- // <script src="js/weixin.js"></script> -->
+
+
+
+	<script src="http://makaprojects.oss-cn-hangzhou.aliyuncs.com/js/jquery.transit.min.js"></script>
+
+
+
+	<!-- 触摸滑动效果 -->
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+
+	<script src="js/idangerous.swiper-2.1.min.js"></script>
+
+
+
+	<!-- 3D效果 -->
+
+<!-- 	<link rel="stylesheet" href="css/idangerous.swiper.3dflow.css">
+
+<script src="js/idangerous.swiper.3dflow.js"></script> -->
+
+
+
+    <!-- Smooth -->
+
+	<script src="js/idangerous.swiper.min.js"></script>
+
+	<script src="js/idangerous.swiper.progress.js"></script>
+
+
+	<link rel="stylesheet" href="css/animations.css">
+
+	<link rel="stylesheet" href="css/myai.css">
+
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+	<style type="text/css">
+		.page{
+
+			margin:0;
+
+			padding:0;
+
+			overflow:hidden;
+
+			top:0;
+
+			position:relative;
+
+			font-family: "微软雅黑";
+
+		}
+
+		#pages {
+
+			margin:0;
+
+			padding:0;
+
+			width:320px;
+
+			height:504px;
+
+			position:absolute;
+
+			left:50%;
+
+			top:50%;
+
+			margin:-252px 0 0 -160px;
+
+			overflow:hidden;
+
+		}
+
+		.swiper-containermain
+
+		{
+
+			margin:0;
+
+			padding:0;
+
+			width:320px;
+
+			height:504px;
+
+			position:absolute;
+
+			left:50%;
+
+			top:50%;
+
+			margin:-252px 0 0 -160px;
+
+		}
+
+		#loading{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(45,41,43,1);
+		}
+
+		section img{
+			position: absolute;
+		}
+
+		.page-bg{
+			top:50%;
+			left: 50%;
+			width: 320px;
+			height: 504px;
+			margin:-252px -160px;
+		}
+	</style>
+
+	<!-- 微信头设置 START -->
+	 
+	 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	 <script src="js/wxconfig.js"></script>
+	 <script>
+
+	 // setwx({
+	 // 	debug:false,
+	 // 	title:"梦想.家",
+	 // 	desc:"您给我一个梦想，我们还您一个家",
+	 // 	imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/jiaju/5-30/jiaju_logo.jpg",
+	 // });
+
+	 
+	 </script>
+	<!-- 微信头设置 END -->
+
+</head>
+
+
+<body style="padding:0;margin:0;background:#000;">
+
+	<!-- 预加载loading图片 START -->
+	<!-- <img  style="position:absolute;top:160px;width:180px;left:50%;margin-left:-90px" src="http://myteamproject.oss-cn-beijing.aliyuncs.com/FBB/3-29/loading.gif" alt=""> -->
+	<!-- 预加载loading图片 END -->
+
+	<!-- <audio id="music" autoplay loop src="#" data-src="http://makaupload.qiniudn.com/fbbmusic1.mp3"></audio> -->
+
+	<audio id="music"  autoplay="autoplay" loop="loop">
+		  <!-- <source src="http://makaupload.qiniudn.com/fbbmusic1.mp3" type="audio/mpeg"/> -->
+		您的浏览器不支持 audio 元素。
+	</audio>
+
+	<div id="page_maincontent" style="width:100%;height:100%;overflow:hidden">
+
+		
+
+		<div id="pages">
+
+			<div id="swiper_container" class="swiper-container swiper-containermain">
+
+				<div class="swiper-wrapper">
+					<!-- 1 -->
+					<section class="swiper-slide page swiper-no-swiping" style="">
+
+						<img id="p1_bg" class="page-bg" data-role="show" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p1-bg.png" alt="">
+						<img id="p1_nv" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p1-nv.png" alt="">
+						<img id="p1_nan" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p1-nan.png" alt="">
+						<img id="p1_word1" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p1-word1.png" alt="">
+						<img id="p1_word2" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p1-word2.png" alt="">
+						<img id="p1_word3" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p1-word3.png" alt="">
+
+					</section>
+
+					<!-- 2 -->
+					<section class="swiper-slide page swiper-no-swiping" style="">
+
+						<img id="p2_bg_1" class="page-bg" data-role="show" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/bg-1.jpg" alt="">
+						<img id="p2_bg_2" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/bg-2.jpg" alt="">
+						<img id="p2_word" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p2-word.png" alt="">
+						<img id="p2_word2" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p2-word2.png" alt="">
+
+					</section>
+
+					<!-- 3 -->
+					<section class="swiper-slide page swiper-no-swiping" style="">
+
+						<img id="p3_bg_1" class="page-bg" data-role="show" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/bg-1.jpg" alt="">
+						<img id="p3_bg_2" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p3-bg2.jpg" alt="">
+						<img id="p3_word" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p3-word.png" alt="">
+						<img id="p3_word2" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p3-word2.png" alt="">
+
+					</section>
+					
+
+				</div>
+
+				<!-- <img class="switch" src="http://myteamproject.oss-cn-beijing.aliyuncs.com/FBB/3-29/off.png" alt=""> -->
+				<!-- <img class="switch" src="http://myteamproject.oss-cn-beijing.aliyuncs.com/FBB/3-29/on.png" alt=""> -->
+
+			</div>
+
+		</div>
+		
+	</div>
+
+	<div id="" style="position:absolute;width:640px;height:1008px;top:50%;left:50%;margin:-504px -320px;background:rgb(253,242,137);display:none;"></div>
+
+	<div id="loading" style="">
+		<img  style="position:absolute;top:160px;width:180px;left:50%;margin-left:-90px" src="http://myteamproject.oss-cn-beijing.aliyuncs.com/FBB/3-29/loading.gif" alt="">
+		<!-- <div style="position:absolute;width:320px;height:20px;left:50%;top:50%;margin:-10px -160px;text-align:center;text-shadow:0px 0px 3px #111;">
+			加载中...
+		</div> -->
+	</div>
+
+		
+</body>
+
+<script src="js/main.js"></script>
+
+
+
