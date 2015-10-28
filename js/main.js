@@ -304,13 +304,17 @@ $(function(){
 			return
 		}
 
+		var url = window.location.href.replace("ym/","ym") + "?img_token=" + pic_token + "&des=" + $(".p4-des").val() + "&src=" + $(".p4-src").val();
+
 		 setwx({
-		 	debug:false,
-		 	title:"梦想.家",
-		 	desc:"您给我一个梦想，我们还您一个家",
-		 	imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/jiaju/5-30/jiaju_logo.jpg",
-				ulr: window.location.href.replace(\/$\, "") + "?img_token=" + pic_token + "&des=" + $(".p4-des").val() + "&src=" + $(".p4-src").val()
+		 	debug: true,
+		 	title: "梦想.家",
+		 	desc: "您给我一个梦想，我们还您一个家",
+		 	imgurl: "http://myteamproject.oss-cn-beijing.aliyuncs.com/jiaju/5-30/jiaju_logo.jpg",
+			url: url
 		 });
+
+		 alert("生成海报成功！")
 
 	});
 
