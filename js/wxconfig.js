@@ -4,7 +4,8 @@ function setwx(msg) {
 	$.ajax({
 		url: 'http://makerh5.com/web/api/wx/sample.php',
 		data: {
-			url: window.location.href.split('#')[0]
+			url: msg["url"]
+			// url: window.location.href.split('#')[0]
 		},
 		type: 'post',
 		dataType: 'json',

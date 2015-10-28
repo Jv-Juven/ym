@@ -167,6 +167,7 @@
 	 // 	title:"梦想.家",
 	 // 	desc:"您给我一个梦想，我们还您一个家",
 	 // 	imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/jiaju/5-30/jiaju_logo.jpg",
+			// ulr: window.location.href.replace("\/$\", "") + "?img_token=" + pic_token + "&des=" + $(".p4-des").val() + "&src=" + $(".p4-src").val()
 	 // });
 
 	 
@@ -229,6 +230,28 @@
 						<img id="p3_word2" class="page-bg" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-27/p3-word2.png" alt="">
 
 					</section>
+
+					<!-- 4 -->
+					<section class="swiper-slide page swiper-no-swiping" style="">
+
+						<img id="p4_bg_1" class="page-bg" data-role="show" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-28/p4-bg.jpg" alt="">
+						<img id="p4_logo" class="page-bg" data-role="show" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-28/p4-logo.png" alt="">
+						<div id="upload_btn_wrapper">
+							<div class="upload-pic"></div>
+							<div id="upload_btn"></div>
+						</div>
+						<div class="input-area">
+							<span>面对<input class="p4-des" type="text" autofocus>，我无所谓，</span>
+							<span>我是<input class="p4-src" type="text">，我是大主宰！</span>
+						</div>
+						<img id="p4_btn" class="p4-btn" data-role="show" src="http://bigproject.oss-cn-beijing.aliyuncs.com/ym/10-28/p4-button.png" alt="">
+						
+
+						<div class="page-bg warn-mask">
+							<img class="loading" src="./images/loading.gif">
+						</div>
+
+					</section>
 					
 
 				</div>
@@ -253,7 +276,10 @@
 
 		
 </body>
-
+<script type="text/javascript" src="./js/plugins/qiniu.min.js"></script>
+<script type="text/javascript" src="./js/plugins/plupload.full.min.js"></script>
+<script type="text/javascript" src="./js/plugins/upload.js"></script>
+<script src="./js/common.js"></script>
 <script src="js/main.js"></script>
 
 

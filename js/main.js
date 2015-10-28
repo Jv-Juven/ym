@@ -20,8 +20,8 @@ $(function(){
 	function disappearall()
 
 	{
-		$("#swiper_container section").find("img").hide();
-		$("#swiper_container section").find("img").each(function(){
+		$("#swiper_container section>img").hide();
+		$("#swiper_container section>img").each(function(){
 			if( $(this).attr("data-role") =="show" ){
 				$(this).show();
 			}
@@ -64,6 +64,14 @@ $(function(){
 
 	}
 
+	function showp4()
+	{
+		disappearall();
+
+		
+
+	}
+
 
 	ws=document.body.clientWidth/320.0;
 
@@ -100,7 +108,7 @@ $(function(){
 				noSwiping : false,
 				noSwipingClass : 'swiper-no-swiping',
 
-				initialSlide: 0,
+				initialSlide: 3,
 
 				followFinger: true,
 
@@ -235,4 +243,108 @@ $(function(){
 
 	//============================扩展代码====================================
 
+	var pic_wrapper = $(".upload-pic");
+	var pic_token = "";
+
+	//图片上传
+	window.uploader({
+	    browse_button: "upload_btn",
+	    container: "upload_btn_wrapper",
+	},{
+	    FileUploaded: function (up,file,info) {
+	        info = $.parseJSON(info);
+	        domain = up.getOption("domain");
+	        url = domain + info.key;
+	        console.log(url);
+	        pic_token = info.key;
+	        $("#upload_btn_wrapper .upload-pic").append('<img src="' + url + '">');
+	        
+	    },
+	    BeforeUpload: function() {
+	    	$(".warn-mask").show();
+	    },
+	    UploadComplete: function() {
+	       //队列文件处理完毕后,处理相关的事情
+
+	       //设置上传得图片居中
+	       var img = $("#upload_btn_wrapper .upload-pic img");
+	       console.log(img);
+	       img.on("load", function(){
+		       	$(this).center({
+			       	"width": pic_wrapper.outerWidth(),
+			       	"height": pic_wrapper.outerHeight()
+			       });
+	       });
+	       $(".warn-mask").hide();
+	    },
+	    'Error': function(up, err, errTip) {
+	       //上传出错时,处理相关的事情
+	       alert(errTip);
+	    }
+	});
+
+	//生成海报按钮
+	$("#p4_btn").on("click", function(){
+
+		var des = $(".p4-des").val();
+		var src = $(".p4-src").val();
+
+		if (pic_token.length == 0) {
+			alert("请上传图片");
+			return;
+		}
+		if (des.length == 0){
+			alert("请填写目标人物");
+			$(".p4-des").focus();
+			return
+		}
+		if (src.length == 0){
+			alert("请填写你的昵称");
+			$(".p4-src").focus();
+			return
+		}
+
+		 setwx({
+		 	debug:false,
+		 	title:"梦想.家",
+		 	desc:"您给我一个梦想，我们还您一个家",
+		 	imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/jiaju/5-30/jiaju_logo.jpg",
+				ulr: window.location.href.replace(\/$\, "") + "?img_token=" + pic_token + "&des=" + $(".p4-des").val() + "&src=" + $(".p4-src").val()
+		 });
+
+	});
+
+
+	/////////////////////////////////
+	// Chrome下input输入框内容无法选中的解决方法 //
+	/////////////////////////////////
+	$("input").click(function(e){
+	　　$(this).select();
+	});
+	//阻止chrome自己的mouseup事件即可。
+	$("input").mouseup(function(e){
+	    if(window.navigator.userAgent.indexOf("Chrome")!=-1){
+	        var event = e||window.event; 
+	        event.preventDefault(); 
+	    }
+	});
+
+
+
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
